@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-=======
 // Smooth Scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
+        // Smooth scroll to the section
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -28,11 +14,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.onload = () => {
     const sections = document.querySelectorAll('.home-section, .about-section, .projects-section, .contact-section');
     sections.forEach((section, index) => {
+        // Initially set opacity to 0 for each section
         section.style.opacity = 0;
         section.style.transition = 'opacity 1s ease-in-out';
+
+        // Add a timeout to create a delay between animations for each section
         setTimeout(() => {
             section.style.opacity = 1;
-        }, 500 * (index + 1));
+        }, 500 * (index + 1)); // The delay increases with each section
     });
 };
->>>>>>> 6c1b3fd37acfd00d03c3355843d8dd055bbed882
