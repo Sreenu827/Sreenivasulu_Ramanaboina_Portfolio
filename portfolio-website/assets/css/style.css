@@ -1,54 +1,82 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* General styles for body */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
 }
+
+/* Header styles */
 header {
     background-color: #333;
-    color: white;
-    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
 }
-header nav ul {
-    display: flex;
-    justify-content: center;
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
-header nav ul li {
-    margin: 0 15px;
-}
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-h1, h2, h3 {
-    color: #333;
-}
-.intro, .about, .experience, .projects, .contact {
+
+/* Section styles */
+section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-}
-.button {
+
+/* Button styles */
+.btn {
     display: inline-block;
+    margin: 10px 0;
     padding: 10px 20px;
     background-color: #333;
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
 }
-.button:hover {
+
+.btn:hover {
     background-color: #555;
+}
+
+/* Image styles */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
