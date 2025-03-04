@@ -1,61 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreenivasulu Ramanaboina - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+// Smooth Scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-    <section id="home" class="home-section">
-        <div class="home-content">
-            <h1>Hi, I'm Sreenivasulu Ramanaboina</h1>
-            <p>Cloud DevOps Engineer</p>
-            <a href="#about" class="cta-button">Learn More</a>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>I'm passionate about Cloud technologies and DevOps. I have expertise in designing scalable cloud infrastructure and implementing CI/CD pipelines.</p>
-        <a href="#contact" class="cta-button">Contact Me</a>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <h3>Cloud Infrastructure Automation</h3>
-                <p>Designed and automated cloud infrastructure using AWS & Terraform.</p>
-            </div>
-            <div class="project-card">
-                <h3>CI/CD Pipeline</h3>
-                <p>Built and deployed CI/CD pipelines using Jenkins & Kubernetes.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sreeni.ramanaboina@gmail.com">sreeni.ramanaboina@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Sreenivasulu Ramanaboina. All rights reserved.</p>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
+// Animation effect for sections on page load
+window.onload = () => {
+    const sections = document.querySelectorAll('.home-section, .about-section, .projects-section, .contact-section');
+    sections.forEach((section, index) => {
+        section.style.opacity = 0;
+        section.style.transition = 'opacity 1s ease-in-out';
+        setTimeout(() => {
+            section.style.opacity = 1;
+        }, 500 * (index + 1));
+    });
+};
