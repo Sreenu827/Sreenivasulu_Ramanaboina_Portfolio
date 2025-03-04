@@ -1,2 +1,3 @@
-// This is where you can add interactivity like form validation or dynamic content loading
-console.log('Portfolio loaded!');
+// main.js
+// You can add any interactive functionality here
+console.log("Welcome to my portfolio!");
