@@ -5,10 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="./assets/index-C4B3Ied-.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dr0W8P2d.css">
+    <script type="module" crossorigin src="./assets/index-TNTyb-9U.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CxnlUOqK.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Animation effect for sections on page load -->
+    <script>
+      window.onload = () => {
+        const sections = document.querySelectorAll('.home-section, .about-section, .projects-section, .contact-section');
+        sections.forEach((section, index) => {
+          section.style.opacity = 0;
+          section.style.transition = 'opacity 1s ease-in-out';
+          setTimeout(() => {
+            section.style.opacity = 1;
+          }, 500 * (index + 1));
+        });
+      };
+    </script>
   </body>
 </html>
